@@ -4,10 +4,11 @@ Algoritma porter ditemukan pertama kali oleh Martin Porter (1980), digunakan unt
 
 
 # Requirements
-1.JQuery
-2.Papa Parse (CSV Reader JS)
-3.Swal JS
-4.Dataset
+
+ 1. 1.JQuery
+ 2. Papa Parse (CSV Reader JS)
+ 3. Swal JS
+ 4. Dataset
 
 ## Papa Parse Init 
 
@@ -36,3 +37,5 @@ Langkah langkah algoritma Porter
     b.Hapus awalan ke-2, kata dasar ditemukan dalam kamus maka langkah berhenti, jika belum maka lanjut ke langkah 6
 6.  periksa kata dasar jika ada dalam kamus maka berhenti
 
+
+### by FataElIslami
