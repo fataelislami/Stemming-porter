@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title></title>
+        <script src="jquery-min.js"></script>
+        <script src="papaparse.js"></script>
+        <link rel="stylesheet" href="bootstrap-min.css">
+        <link rel="stylesheet" href="twitter.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Natural Language Processing - Tugas Stemming</h4>
+                    <table>
+                        <tr>
+                            <td>Nama : </td>
+                            <td>Fata El Islami</td>
+                        </tr>
+                        <tr>
+                            <td>Nim : </td>
+                            <td>10116499</td>
+                        </tr>
+                        <tr>
+                            <td>Kelas : </td>
+                            <td>NLP 3</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h4>Definisi</h4>
+                    <p>Algoritma porter ditemukan pertama kali oleh Martin Porter (1980), digunakan untuk proses stemming bahasa inggris. Algoritma tersebut kemudian dikembangkan oleh W.B. Frakes pada tahun 1992 untuk diimplemetasikan pada bahasa indonesia.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Algoritma Porter</h4>
+                    <p><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">Langkah langkah algoritma Porter</span></font></p><ol><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">Menghapus Partikel</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">Menghapus Kata ganti (Possesive Pronoun)</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">Hapus awalan pertama. Jika tidak ada lanjutkan ke langkah 4a, jika ada cari maka lanjutkan ke langkah 4b.</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">a.Hapus awalan kedua, lanjutkan ke langkah 5a</span><br><span style="font-size: 14px;">b.Hapus akhiran, jika tidak ditemukan maka kata tersebut diasumsikan sebagai root word. Jika ditemukan maka lanjutkan ke langkah 5b.</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">a.Hapus akhiran. Kemudian kata akhir diasumsikan sebagai root word.</span><br><span style="font-size: 14px;">b.Hapus awalan kedua. Kemudian kata akhir diasumsikan sebagai root word.</span><br><br></font></li></ol></p>
+                </div>
+                <div class="col-md-6" style="height: 430px;overflow-y: scroll;">
+                    <h4>Flowchart</h4>
+                    <img src="flowchart.png" style="width:100%;height: 400px;">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Algoritma Porter Lanjutan</h4>
+                    <p><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">Berdasarkan penelitian yang dilakukan A. Magriyanti pada tahun 2018, Algoritma porter dikembangkan dengan menambah pengecekan kamus, berikut langkah langkah algoritma Porter Pengembangan Lanjutan</span></font></p><ol><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">Menghapus Partikel</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">Menghapus Kata ganti (Possesive Pronoun)</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">Hapus awalan pertama. Jika tidak ada lanjutkan ke langkah 4a, jika ada cari maka lanjutkan ke langkah 4b.</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">a.Hapus awalan kedua, lanjutkan ke langkah 5a</span><br><span style="font-size: 14px;">b.Hapus akhiran, jika tidak ditemukan maka kata tersebut diasumsikan sebagai root word. Jika ditemukan maka lanjutkan ke langkah 5b.</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">a.Hapus akhiran, jika kata dasar ditemukan dalam kamus maka langkah berhenti, jika belum maka lanjut ke langkah 6</span><br><span style="font-size: 14px;">b.Hapus awalan ke-2, kata dasar ditemukan dalam kamus maka langkah berhenti, jika belum maka lanjut ke langkah 6</span></font></li><li><font color="#2e2e2e" face="Open Sans, sans-serif"><span style="font-size: 14px;">periksa kata dasar jika ada dalam kamus maka berhenti</span></font></li></ol><p></p>
+                </div>
+                <div class="col-md-6" style="height: 350px;overflow-y: scroll;">
+                    <h4>Table Aturan</h4>
+                    <p style="text-align: center; ">Table 1. Aturan Inflectional Particle</p><table class="table table-bordered" style="text-align: center; "><tbody><tr><td>Akhiran</td><td>Replacement</td><td>Additional Condition</td><td>Contoh</td></tr><tr><td>-kah</td><td>NULL</td><td>NULL</td><td>bukukah</td></tr><tr><td>-lah</td><td>NULL</td><td>NULL</td><td>pergilah</td></tr><tr><td>-pun</td><td>NULL</td><td>NULL</td><td>bukupun</td></tr></tbody></table><p style="text-align: center; ">Table 2. Aturan Inflectional Possesive Pronoun</p><table class="table table-bordered" style="text-align: center; "><tbody><tr><td>Akhiran</td><td>Replacement</td><td>Additional Condition</td><td>Contoh</td></tr><tr><td>-ku</td><td>NULL</td><td>NULL</td><td>bukuku</td></tr><tr><td>-mu</td><td>NULL</td><td>NULL</td><td>bukumu</td></tr><tr><td>-nya</td><td>NULL</td><td>NULL</td><td>bukunya</td></tr></tbody></table><p style="text-align: center; ">Table 3. Aturan First Order Derivational Prefix</p><table class="table table-bordered" style="text-align: center; "><tbody><tr><td>Akhiran</td><td>Replacement</td><td>Additional Condition</td><td>Contoh</td></tr><tr><td>meng-</td><td>NULL</td><td>NULL</td><td>mengukur-&gt;ukur</td></tr><tr><td>meny-</td><td>S</td><td>V...</td><td>menyapu-&gt;sapu</td></tr><tr><td>men-</td><td>NULL</td><td>NULL</td><td>menduga-&gt;duga</td></tr><tr><td>mem-</td><td>P</td><td>V...</td><td>memaksa-&gt;paksa</td></tr><tr><td>mem-</td><td>NULL</td><td>NULL</td><td>membaca-&gt;baca</td></tr><tr><td>me-</td><td>NULL</td><td>NULL</td><td>merusak-&gt;rusak</td></tr><tr><td>peng-</td><td>NULL</td><td>NULL</td><td>pengukur-&gt;ukur</td></tr><tr><td>peny-</td><td>S</td><td>V...</td><td>penyapu-&gt;sapu</td></tr><tr><td>pen-</td><td>NULL</td><td>NULL</td><td>penduga-&gt;duga</td></tr><tr><td>pem-</td><td>P</td><td>V...</td><td>pemaksa-&gt;paksa</td></tr><tr><td>pem-</td><td>NULL</td><td>NULL</td><td>pembaca-&gt;baca</td></tr><tr><td>di-</td><td>NULL</td><td>NULL</td><td>diukur-&gt;ukur</td></tr><tr><td>ter-</td><td>NULL</td><td>NULL</td><td>tersapu-&gt;sapu</td></tr><tr><td>ke-</td><td>NULL</td><td>NULL</td><td>kekasih-&gt;kasih</td></tr></tbody></table><p style="text-align: center; ">Table 4. Aturan Second Order Derivational Prefix</p><table class="table table-bordered" style="text-align: center; "><tbody><tr><td>Awalan</td><td>Replacement</td><td>Additional Condition</td><td>Contoh</td></tr><tr><td>ber-</td><td>NULL</td><td>NULL<br></td><td>berlari-&gt;lari</td></tr><tr><td>bel-</td><td>NULL<br></td><td>Ajar</td><td>belajar-&gt;ajar</td></tr><tr><td>be-</td><td>NULL<br></td><td>NULL<br></td><td>bekerja-&gt;kerja</td></tr><tr><td>per-</td><td>NULL<br></td><td>NULL<br></td><td>perjelas-&gt;jelas</td></tr><tr><td>pel-</td><td>NULL<br></td><td>Ajar</td><td>pelajar-&gt;ajar</td></tr><tr><td>pe-</td><td>NULL<br></td><td>NULL<br></td><td>pekerja-&gt;kerja</td></tr></tbody></table><p style="text-align: center; ">Table 5. Aturan Derivational Suffix</p><p style="text-align: center; "><br></p><table class="table table-bordered" style="text-align: center; "><tbody><tr><td>Akhiran</td><td>Replacement</td><td>Additional Condition</td><td>Contoh</td></tr><tr><td>-kan</td><td>NULL</td><td>Prefix bukan anggota {ke,peng}</td><td><p>tarrikan-&gt;tarik</p><p>mengambilkan-&gt;ambil</p></td></tr><tr><td>-an</td><td>NULL</td><td>Prefix bukan anggota {di,meng,ter}</td><td><p>makanan-&gt;makan</p><p>perjanjian-&gt;janji</p></td></tr><tr><td>-i</td><td>NULL</td><td>Prefix bukan anggota {ber,ke,peng}</td><td><p>tandai-&gt;tanda</p><p>mendapati-&gt;dapat</p></td></tr></tbody></table><p style="text-align: center; "><br></p>
+                </div>
+                
+            </div>
+            <h4>Program Stemming 50 Sentimen Tweet @indiHome</h4>
+            <div class="row">
+                <button id="proses" class="btn btn-primary" style="width: 100%;">Mulai</button>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3><center>Dataset</center></h3>
+                    <div id="dataset-view">
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3><center>Hasil</center></h3>
+                    <div id="result-view">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="stemming-porterV2.js?v11"></script>
+    <script src="swal.js"></script>
+    <script src="bootstrap-min.js"></script>
+</html>
