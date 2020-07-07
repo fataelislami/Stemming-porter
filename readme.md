@@ -6,7 +6,8 @@ Algoritma porter ditemukan pertama kali oleh Martin Porter (1980), digunakan unt
 # Requirements
 1.JQuery
 2.Papa Parse (CSV Reader JS)
-3.Dataset
+3.Swal JS
+4.Dataset
 
 ## Papa Parse Init 
 
